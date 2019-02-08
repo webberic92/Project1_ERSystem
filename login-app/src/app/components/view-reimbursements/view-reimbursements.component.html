@@ -1,0 +1,22 @@
+<h1>Reimbursement Details</h1>
+
+<style>
+  table, th, td {
+    border: 1px solid black;
+  }
+</style>
+
+<table style="width:50%">
+  <tr>
+    <th id="type">Type</th>
+    <th id="amount">Amount</th>
+    <th id="description">Description</th>
+    <th id="dateSubmitted">Submit Date</th>
+  </tr>
+  <tr *ngFor="let reimbursement of reimbursements">
+    <td headers="type">{{reimbursement.typeId}}</td>
+    <td headers="amount">{{reimbursement.amount}}</td>
+    <td headers="description">{{reimbursement.description}}</td>
+    <td headers="dateSubmitted">{{reimbursement.dateSubmitted}}</td>
+  </tr>
+</table>

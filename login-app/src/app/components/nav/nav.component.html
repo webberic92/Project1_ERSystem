@@ -1,0 +1,58 @@
+
+<nav>
+  <ul>
+    <li *ngFor="let item of navItems"><a [routerLink]="['/', item.link]">{{item.title}}</a>
+    </li>
+  </ul>
+<h1></h1>
+  <h1> You are logged in as.kjg..</h1>
+  <button type="button" (click)="getUser()">Get user Name</button>
+  <!--<ul>-->
+    <!--<li *ngFor="let item of navItems"><a ="">{{item.title}}</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <p id="display"></p>
+  <p id="firstName"> </p>
+</nav>
+<style>
+.topright {
+position: absolute;
+top: 8px;
+right: 16px;
+font-size: 18px;
+}
+.middle {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  font-size: 30px;
+}
+ .button {
+   display: inline-block;
+   padding: 15px 25px;
+   font-size: 24px;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+   outline: none;
+   color: #fff;
+   background-color: #4CAF50;
+   border: none;
+   border-radius: 15px;
+   box-shadow: 0 9px #999;
+ }
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+  <div class="topright">
+  <button type="submit" (click)="Logout()">Logout</button>
+  </div>
+<div>
+<button type="submit" (click)="getUser()">GetName</button>
+  </div>
